@@ -18,4 +18,6 @@ Route::get('/new-user', [UserController::class, "new_user"]);
 Route::post('/add-user', [UserController::class,"add_user"]);
 Route::get('/list-user',[UserController::class,"list_user"]);
 Route::get('/delete-user/{id}',[UserController::class,"delete_user"]);
+Route::get('/edit-user/{id}',[UserController::class,"edit_user"]);
+Route::post('/update-user',[UserController::class,"update_user"]);
 

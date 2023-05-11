@@ -30,11 +30,15 @@
                             <tbody>
                                 @foreach ($users as $user)
                                     <tr>
-                                        <td>{{ $user->id }}</td>
+                                        <td >{{ $user->id }}</td>
                                         <td>{{ $user->name }}</td>
                                         <td>{{ $user->email }}</td>
-                                        <td> <a href="{{ url('delete-user')."/" . $user->id }}" class="btn btn-danger">
+                                        <td>
+                                            <a href="{{ url('delete-user')."/" . $user->id }}" class="btn btn-danger">
                                                 Delete
+                                            </a>
+                                            <a href="{{ url('edit-user')."/" . $user->id }}" class="btn btn-secondary">
+                                                Edit
                                             </a>
                                         </td>
 

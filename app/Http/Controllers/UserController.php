@@ -38,4 +38,19 @@ class UserController extends Controller
             "User not found";
         }
     }
+    function edit_user($id)
+    {
+        $user = User::find($id);
+        return view('user.update', compact('user'));
+    }
+
+    function update_user(Request $request)
+    {
+        $user = User::where("id", $request->user_id)->first();
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = $request->password;
+        $user->save();
+        return redirect('list-user');
+    }
 }
