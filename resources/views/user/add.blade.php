@@ -17,7 +17,8 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <form action="">
+                        <form action="{{ url('add-user') }}" method="POST">
+                            @csrf
                             <div class="mb-3">
                                 <h6>Name</h6>
                                 <input type="text" class="form-control" name="name">
@@ -31,7 +32,7 @@
                                 <input type="password" class="form-control" name="password">
                             </div>
                             <div class="mb-3">
-                                <button class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary">
                                     Submit
                                 </button>
                             </div>
