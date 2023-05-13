@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CustomerController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 
@@ -21,3 +22,4 @@ Route::get('/delete-user/{id}',[UserController::class,"delete_user"]);
 Route::get('/edit-user/{id}',[UserController::class,"edit_user"]);
 Route::post('/update-user',[UserController::class,"update_user"]);
 
+Route::get('/customer',[CustomerController::class,'view_customer']);
